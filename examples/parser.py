@@ -11,9 +11,8 @@ sys.path.append(str(object=Path(__file__).resolve().parents[1]))
 
 # Introduce Fandango Python API
 
-from fandango import Fandango
-
 from constants import NAMEDB_SPEC
+from fandango import Fandango
 
 with open(NAMEDB_SPEC, "r") as spec:
     fan = Fandango(spec)
@@ -51,5 +50,3 @@ for tree in fan.parse(sample):
 
 bad_sample = "6"
 fan.parse(bad_sample)
-
-# %%
