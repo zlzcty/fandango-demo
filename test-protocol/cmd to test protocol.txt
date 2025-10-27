@@ -1,0 +1,12 @@
+pip install aiosmtpd             # install aiosmtpd for the SMTP server
+python -m aiosmtpd -d -n         # run the SMTP server
+
+# fandango act as client
+# error:fandango talk -f smtp-simple.fan --client 8025
+fandango talk -f smtp-simple.fan 8025
+
+# fandango act as server
+fandango talk -f smtp-simple.fan --server 8125
+telnet localhost 8125
+QUIT
+
